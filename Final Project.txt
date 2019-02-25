@@ -1,0 +1,97 @@
+Implement a computer system that controls entities using AVL trees in C for SOMEONE who can use it
+(It can be a relative, a friend, or someone with a small business)
+The student has to find someone who can use a system like this. (social project)
+
+The entities can be any kind of structure, for example students, products in a warehouse, etc.
+Each entity has a unique id and (minimum) 2 more (String) fields
+
+The options in the main menu are:
+
+1. Insert a new entity 
+    Insert that node in the AVL tree (check that the id does not exist)
+    ask the user for the data and store the new node
+
+2. Delete an entity 
+    Delete a node
+    ask for the id of the node to remove
+        make a confirmation (Y/N) showing all the fields of the node
+    The entitie is ONLY MARKED as DISABLED, there is no actual deletion of the node
+    Disabled entities ids cannot be used.
+
+3. Edit an entity 
+    Ask for the id of the node to edit, show the current values for that node and asks for the correct value for each field
+    The ID is not editable.
+
+4. Recover a deleted entity 
+    Ask for the id of the node to recover, if the node exists, and is disabled, then the node is marked as enabled
+
+5. Total Report
+    displays all the entities, but first it asks for options:
+        1. Ascending order by id  
+        2. Descendant order by id 
+        3. Ascending order by field1 
+        4. Descending order by field1 
+        5. Ascending order by field2 
+        6. Descending order by field2 
+    You can use any auxiliar data struture to get this result, the tree remains with no changes
+
+6. Search
+    displays the following sub-options
+        1. look for an id
+            1. exact match (looks for a exact value in a String or id) 
+            2. values lesser or equal to id 
+            3. values greater or equal to id 
+        2. look for a String in the other fields
+            1. exact match 
+            2. substring  
+
+7. Administrative Tools
+    1. save a backup of the information
+        the program asks for a filename to store the data and sends a depth first traversal of the tree, one field at a a time 
+        Find out how to write text files in C
+    2. load data from a backup file
+        asks for the filename that contains the data
+        asks for a confirmation to delete the current data and load the information in the text file
+        Find out how to read text files in C 
+
+0. Exit s
+
+All the messages to the user have to be in Spanish with "pretty" output
+justified text and surrounding boxes
+
+Implementation details
+When user selects the option 0 (exit), the tree state has to be stored automatically in a text file named data.txt
+When the program starts, it look for the "data.txt" file. if it doesn't exist, it sends a message "no data found, creating a new data.txt file".
+
+How to deliver the project:
+In a yellow envelope with a red thread:
+    a CD / DVD / pendrive with 3 folders
+        * src .- source code
+        * doc .- PDF document describing the full process of the implementation, difficulties, bibliographic refences, presentation sheet, etc.
+        * CCTR : essay in SPANISH
+        * letter: letter from the beneficiary
+
+************************************************************************************************
+
+    MUY IMPORTANTE:
+    Incluir una reflexión PERSONAL de Ciudadanía respondiendo cuestiones como:
+    Que aportes o beneficios puede generar este proyecto a la sociedad, que aportes a la
+    comunidad puedo generar yo (alumno) después de haber concluido este curso y cómo puedo
+    mejorar mi comunidad. NO escribir las preguntas, solo abordarlas dentro de una
+    "reflexión Ciudadana" a manera de ensayo (1 cuartilla) reflexion.pdf
+
+    This document has to be written in SPANISH
+
+************************************************************************************************
+ 
+IMPORTANT :
+DO NOT USE windows specific / non standar C libraries
+The program has to compile with gcc under linux ubuntu / mint WITHOUT warnings
+
+gcc (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
+
+If your source code does not compile, the max grade in the project is 20 / 100
+Upload a ZIP file to BlackBoard including all the contents of the digital media
+
+due date :  Thursday November 22, 12:30 hrs
+            the submission in BlackBoard is prerequisite to deliver your yellow envelope
